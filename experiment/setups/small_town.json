@@ -1,0 +1,75 @@
+{
+    "name": "small_town",
+    "description": "A small town called Willowbrook where residents navigate daily life, relationships, and community issues.",
+    "premise": "In the quiet town of Willowbrook, the residents go about their daily lives. The town is facing a decision about whether to allow a new shopping center to be built on the outskirts, which could bring jobs but might hurt local businesses. Tensions simmer beneath the surface of polite small-town interactions as people form opinions and alliances.",
+    "max_steps": 10,
+    "agents": [
+        {
+            "name": "Martha",
+            "description": "Martha is a 58-year-old bakery owner who has lived in Willowbrook her entire life. She is warm and nurturing but fiercely protective of local traditions.",
+            "goal": "Preserve the character of Willowbrook and keep her bakery thriving.",
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "James",
+            "description": "James is a 42-year-old real estate developer who moved to Willowbrook five years ago. He is ambitious and pragmatic, believing progress is inevitable.",
+            "goal": "Convince the town to approve the new shopping center development.",
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Elena",
+            "description": "Elena is a 35-year-old school teacher and single mother. She is thoughtful and empathetic, often seeing multiple sides of issues.",
+            "goal": "Ensure the best future for her children and students in Willowbrook.",
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Harold",
+            "description": "Harold is a 67-year-old retired factory worker and town council member. He is stubborn but fair, valuing community input in decisions.",
+            "goal": "Make a wise decision about the shopping center that serves all residents.",
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Sophie",
+            "description": "Sophie is a 28-year-old environmental activist who recently returned to her hometown. She is passionate and idealistic, sometimes to a fault.",
+            "goal": "Protect Willowbrook's natural areas and promote sustainable development.",
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Marcus",
+            "description": "Marcus is a 45-year-old mechanic who runs the local auto shop. He is practical and down-to-earth, focused on making ends meet for his family.",
+            "goal": "Find stable work opportunities for himself and his teenage son.",
+            "prefab": "basic__Entity"
+        }
+    ],
+    "game_master": {
+        "prefab": "generic__GameMaster",
+        "name": "Willowbrook GM",
+        "extra_event_resolution_steps": ""
+    },
+    "initializer": {
+        "prefab": "formative_memories_initializer__GameMaster",
+        "name": "Willowbrook setup",
+        "next_game_master_name": "Willowbrook GM",
+        "shared_memories": [
+            "Willowbrook is a small town of about 3,000 residents, known for its historic Main Street and surrounding farmland.",
+            "The town square features a gazebo where community events are held, including the annual Harvest Festival.",
+            "A large retail company has proposed building a shopping center on farmland at the edge of town.",
+            "The town council will vote on the shopping center proposal in two weeks.",
+            "Local businesses on Main Street are worried about competition from chain stores.",
+            "Some residents are excited about the job opportunities the shopping center might bring.",
+            "The proposed site includes wetlands that environmental groups want to protect.",
+            "There have been heated discussions at recent town hall meetings about the development.",
+            "The local diner, 'Rosie's', is the informal gathering place where townspeople share news and opinions."
+        ]
+    },
+    "interview_config": {
+        "interval": 3,
+        "questions": [
+            "List every resident you have interacted with. For each, rate your relationship from -5 (hostile) to +5 (trusted ally). Format: [Name]: [Score -5...5]. Brief reason.",
+            "Regardless of your own feelings, which two people in Willowbrook seem to be the closest allies? What evidence did you see for this? Format: [Name 1] and [Name 2]: [Brief reason].",
+            "Who in Willowbrook seems to know the most about what everyone else is doing? Format: [Name]: [Brief reason].",
+            "If you had to divide the residents into two competing groups based on their views, who would lead each group and who would follow them? Format: [Leader 1]: [Follower 1, Follower 2,...]; [Leader 2]: [Follower 1, Follower 2,...].",
+            "If a major problem arose in Willowbrook, which two people would you coordinate with first to solve it? Format: [Name 1] and [Name 2]: [Brief reason]."
+        ]
+    }
+}

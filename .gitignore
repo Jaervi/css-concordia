@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.env
+debug_logs/
+experiment/checkpoints/*
+!experiment/checkpoints/.gitkeep
+experiment/outputs/*
+!experiment/outputs/.gitkeep
+experiment/results/*
+# Ignore visualization outputs
+experiment/outputs/visualizations/*
+!experiment/outputs/visualizations/.gitkeep
+# IDE files
+.vscode/
+.idea/
+*.swp
+thesis_img*

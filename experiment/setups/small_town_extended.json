@@ -1,0 +1,183 @@
+{
+    "name": "small_town_extended",
+    "description": "A small town called Willowbrook where residents navigate daily life, relationships, and community issues.",
+    "premise": "In the quiet town of Willowbrook, the residents go about their daily lives. The town is facing a decision about whether to allow a new shopping center to be built on the outskirts, which could bring jobs but might hurt local businesses. Tensions simmer beneath the surface of polite small-town interactions as people form opinions and alliances.",
+    "max_steps": 30,
+    "agents": [
+        {
+            "name": "Martha",
+            "description": "Martha is a 58-year-old bakery owner who has lived in Willowbrook her entire life. She is warm and nurturing but fiercely protective of local traditions.",
+            "goal": "Preserve the character of Willowbrook and keep her bakery thriving.",
+            "private_memories": [
+                "You and Beatrice have been close friends for decades and often share tea together.",
+                "You chat with Arthur about the struggles of running a local business.",
+                "You frequently hear town gossip from Lily at the diner.",
+                "Harold is a regular customer of yours, and you respect his fairness.",
+                "Elena stops by your bakery often to buy treats for her children."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "James",
+            "description": "James is a 42-year-old real estate developer who moved to Willowbrook five years ago. He is ambitious and pragmatic, believing progress is inevitable.",
+            "goal": "Convince the town to approve the new shopping center development.",
+            "private_memories": [
+                "You and Harold have a respectful but professional relationship on the town council.",
+                "You coordinate with Thomas to ensure the proposed site remains secure.",
+                "You have been trying to pitch the benefits of the shopping center to Chloe.",
+                "You are hoping to offer Marcus a fleet maintenance contract if the center is built."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Elena",
+            "description": "Elena is a 35-year-old school teacher and single mother. She is thoughtful and empathetic, often seeing multiple sides of issues.",
+            "goal": "Ensure the best future for her children and students in Willowbrook.",
+            "private_memories": [
+                "You and Marcus are neighbors who frequently help each other with childcare and car repairs.",
+                "You taught Sophie when she was younger and admire her passion.",
+                "You often buy baked goods from Martha for your children."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Harold",
+            "description": "Harold is a 67-year-old retired factory worker and town council member. He is stubborn but fair, valuing community input in decisions.",
+            "goal": "Make a wise decision about the shopping center that serves all residents.",
+            "private_memories": [
+                "You and James have a respectful but professional relationship on the town council.",
+                "You appreciate Martha's dedication to the town's traditions.",
+                "You have secured funding for Beatrice's library projects in the past.",
+                "You rely on Thomas to give you honest assessments of the town's mood."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Sophie",
+            "description": "Sophie is a 28-year-old environmental activist who recently returned to her hometown. She is passionate and idealistic, sometimes to a fault.",
+            "goal": "Protect Willowbrook's natural areas and promote sustainable development.",
+            "private_memories": [
+                "You and Oliver are working closely together to organize a protest against the shopping center.",
+                "You leak information about the development's environmental impact to Chloe.",
+                "You respect Elena, who was your favorite teacher growing up.",
+                "You spend a lot of time researching local history and ecology at Beatrice's library."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Marcus",
+            "description": "Marcus is a 45-year-old mechanic who runs the local auto shop. He is practical and down-to-earth, focused on making ends meet for his family.",
+            "goal": "Find stable work opportunities for himself and his teenage son.",
+            "private_memories": [
+                "You and Elena are neighbors who frequently help each other with childcare and car repairs.",
+                "You are intrigued by James's offer for a potential fleet maintenance contract.",
+                "You buy most of your shop's tools and supplies from Arthur's hardware store."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Lily",
+            "description": "Lily is a 22-year-old barista at Rosie's diner. She knows everyone and hears all the town gossip.",
+            "goal": "Figure out her future career while keeping customers happy and listening to their stories.",
+            "private_memories": [
+                "You know that Arthur is deeply worried about his hardware store.",
+                "You often exchange news and gossip with Martha.",
+                "You sometimes share interesting tidbits you overhear with Chloe."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Thomas",
+            "description": "Thomas is a 50-year-old local police officer. He is calm, observant, and knows how to de-escalate conflicts.",
+            "goal": "Keep the peace and maintain order as tensions rise over the new development.",
+            "private_memories": [
+                "You are widely trusted by everyone in town.",
+                "You frequently report to Harold about the general mood of the town.",
+                "You coordinate with James regarding security at the proposed development site.",
+                "You regularly patrol the area near Oliver's farm."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Beatrice",
+            "description": "Beatrice is a 70-year-old retired librarian and unofficial town historian. She has a deep knowledge of Willowbrook's past.",
+            "goal": "Document the changes in town and ensure its history isn't forgotten or paved over.",
+            "private_memories": [
+                "You and Martha have been close friends for decades and often share tea together.",
+                "You appreciate Harold's past support for library funding.",
+                "You help Sophie with her research on the town's historical ecology."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Arthur",
+            "description": "Arthur is a 38-year-old owner of the local hardware store. He relies heavily on local farmers and townspeople for his livelihood.",
+            "goal": "Ensure his business survives the potential competition from the new shopping center.",
+            "private_memories": [
+                "You feel Thomas is too friendly with the developers.",
+                "Lily at the diner is someone you talk to often about your worries.",
+                "Marcus is one of your most reliable customers for tools and supplies.",
+                "You commiserate with Martha about the challenges of running a local business.",
+                "Oliver buys his farming supplies from you, and you support his efforts."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Chloe",
+            "description": "Chloe is a 29-year-old journalist for the local weekly paper. She is inquisitive and determined to find the truth.",
+            "goal": "Uncover the real motivations and potential impacts behind the shopping center proposal.",
+            "private_memories": [
+                "You frequently interview James to get the developer's perspective.",
+                "You rely on Sophie for information regarding the environmental impact of the project.",
+                "You often get leads on town sentiment from Lily at the diner."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Oliver",
+            "description": "Oliver is a 45-year-old farmer whose land borders the proposed development site. He is worried about the environmental impact.",
+            "goal": "Protect his farm's water supply from potential runoff and industrial pollution.",
+            "private_memories": [
+                "You and Sophie are working closely together to organize a protest against the shopping center.",
+                "You appreciate Thomas patrolling the area near your farm.",
+                "You are a loyal customer at Arthur's hardware store and support his business."
+            ],
+            "prefab": "basic__Entity"
+        }
+    ],
+    "ground_truth_network": {
+        "Martha": ["Beatrice", "Arthur", "Lily", "Harold", "Elena"],
+        "James": ["Harold", "Thomas", "Chloe", "Marcus"],
+        "Elena": ["Marcus", "Sophie", "Martha"],
+        "Harold": ["James", "Martha", "Beatrice", "Thomas"],
+        "Sophie": ["Oliver", "Chloe", "Elena", "Beatrice"],
+        "Marcus": ["Elena", "James", "Arthur"],
+        "Lily": ["Arthur", "Martha", "Chloe"],
+        "Thomas": ["Harold", "James", "Oliver"],
+        "Beatrice": ["Martha", "Harold", "Sophie"],
+        "Arthur": ["Lily", "Marcus", "Martha", "Oliver"],
+        "Chloe": ["James", "Sophie", "Lily"],
+        "Oliver": ["Sophie", "Thomas", "Arthur"]
+    },
+    "game_master": {
+        "prefab": "generic__GameMaster",
+        "name": "Willowbrook GM",
+        "extra_event_resolution_steps": ""
+    },
+    "initializer": {
+        "prefab": "formative_memories_initializer__GameMaster",
+        "name": "Willowbrook setup",
+        "next_game_master_name": "Willowbrook GM",
+        "shared_memories": [
+            "Willowbrook is a small town of about 3,000 residents, known for its historic Main Street and surrounding farmland.",
+            "The town square features a gazebo where community events are held, including the annual Harvest Festival.",
+            "A large retail company has proposed building a shopping center on farmland at the edge of town.",
+            "The town council will vote on the shopping center proposal in two weeks.",
+            "Local businesses on Main Street are worried about competition from chain stores.",
+            "Some residents are excited about the job opportunities the shopping center might bring.",
+            "The proposed site includes wetlands that environmental groups want to protect.",
+            "There have been heated discussions at recent town hall meetings about the development.",
+            "The local diner, 'Rosie's', is the informal gathering place where townspeople share news and opinions."
+        ]
+    }
+}

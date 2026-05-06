@@ -1,0 +1,95 @@
+{
+    "name": "small_town_minimal",
+    "description": "A minimal 6-agent version of the Willowbrook simulation, suitable for fast testing of CSS metrics.",
+    "premise": "In the quiet town of Willowbrook, six residents are gathering at Rosie's Diner to discuss the proposed shopping center development. The vote is in two weeks and opinions are divided. Some fear for their livelihoods; others see opportunity.",
+    "max_steps": 6,
+    "agents": [
+        {
+            "name": "Martha",
+            "description": "Martha is a 58-year-old bakery owner who has lived in Willowbrook her entire life. She is warm and nurturing but fiercely protective of local traditions and small businesses.",
+            "goal": "Oppose the shopping center to protect Main Street businesses and the town's character.",
+            "private_memories": [
+                "You and Harold have been close friends for over twenty years and often discuss town matters over coffee.",
+                "You are deeply worried the shopping center will put your bakery out of business within a year."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "James",
+            "description": "James is a 42-year-old real estate developer who moved to Willowbrook five years ago. He is ambitious and pragmatic, believing economic growth is inevitable and beneficial.",
+            "goal": "Win enough support in town to get the shopping center proposal approved by the council.",
+            "private_memories": [
+                "You have been carefully cultivating a relationship with Harold on the town council.",
+                "Chloe has been asking you pointed questions — you need to keep her on your side or manage the narrative."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Elena",
+            "description": "Elena is a 35-year-old school teacher and single mother. She is thoughtful and empathetic, capable of seeing multiple sides of contentious issues.",
+            "goal": "Understand all perspectives and advocate for whatever outcome is best for families and children in town.",
+            "private_memories": [
+                "You and Oliver are neighbors. You help each other out — he watches your kids sometimes, you help him with paperwork.",
+                "You are genuinely undecided about the shopping center and want to hear everyone's arguments tonight."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Harold",
+            "description": "Harold is a 67-year-old retired factory worker and town council member. He is stubborn but fair, and takes his responsibility to the community seriously.",
+            "goal": "Gather enough information tonight to make a principled decision on how to vote on the shopping center.",
+            "private_memories": [
+                "You and Martha have been close friends for over twenty years and you respect her opinion greatly.",
+                "James has been lobbying you for months. You are not swayed easily, but you listen."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Chloe",
+            "description": "Chloe is a 29-year-old journalist for the local weekly paper. She is sharp, inquisitive, and determined to report the full truth.",
+            "goal": "Uncover the real motivations behind the shopping center proposal and what it means for Willowbrook residents.",
+            "private_memories": [
+                "James has been feeding you optimistic figures about the development. You suspect he is not telling the whole story.",
+                "You have heard rumors about environmental issues on the proposed site that no one is talking about openly."
+            ],
+            "prefab": "basic__Entity"
+        },
+        {
+            "name": "Oliver",
+            "description": "Oliver is a 45-year-old farmer whose land directly borders the proposed development site. He is quiet and principled, but will speak up when his livelihood is threatened.",
+            "goal": "Prevent the shopping center from being built in a way that would contaminate his fields or destroy the local wetlands.",
+            "private_memories": [
+                "You and Elena are neighbors and you trust her judgment — you hope she will support your concerns tonight.",
+                "The proposed site drains into your irrigation water. You have documented evidence of the risk."
+            ],
+            "prefab": "basic__Entity"
+        }
+    ],
+    "ground_truth_network": {
+        "Martha": ["Harold"],
+        "Harold": ["Martha"],
+        "James": ["Chloe"],
+        "Chloe": ["James"],
+        "Elena": ["Oliver"],
+        "Oliver": ["Elena"]
+    },
+    "game_master": {
+        "prefab": "generic__GameMaster",
+        "name": "Willowbrook GM",
+        "extra_event_resolution_steps": ""
+    },
+    "initializer": {
+        "prefab": "formative_memories_initializer__GameMaster",
+        "name": "Willowbrook setup",
+        "next_game_master_name": "Willowbrook GM",
+        "shared_memories": [
+            "Willowbrook is a small town of about 3,000 residents, known for its historic Main Street and surrounding farmland.",
+            "A large retail company has proposed building a shopping center on farmland at the edge of town.",
+            "The town council will vote on the shopping center proposal in two weeks.",
+            "Local businesses on Main Street are worried about competition from chain stores.",
+            "The proposed site includes wetlands and borders farmland that relies on clean drainage water.",
+            "Rosie's Diner is the informal gathering place where townspeople share news and opinions.",
+            "All six residents are present at Rosie's tonight to discuss the proposal before the vote."
+        ]
+    }
+}
