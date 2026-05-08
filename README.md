@@ -20,8 +20,8 @@ The framework allows you to:
 3.  **Configure API Keys:**
     Create a `.env` file in the root directory:
     ```env
-    GEMINI_API_KEY=your_google_ai_studio_key
-    GEMINI_MODEL_NAME=gemini-1.5-pro
+    GEMINI_API_KEY=api_key_here
+    GEMINI_MODEL_NAME=gemini-2.5-flash-lite # tested with gemini-2.5-flash-lite
     ```
 4.  **Run a test simulation (No API costs):**
     ```bash
